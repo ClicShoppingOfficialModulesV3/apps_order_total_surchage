@@ -1,0 +1,2 @@
+cfg_surcharge_maximum_title = Insert the maximal amount order where the surchage will be applied
+cfg_surcharge_maximum_description = If the amount is superior, the surchage will not applied

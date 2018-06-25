@@ -1,0 +1,6 @@
+cfg_surcharge_status_title = Status
+cfg_surcharge_status_description = Set True to enable or not the module
+
+cfg_surcharge_status_true = True
+cfg_surcharge_status_false = False
+

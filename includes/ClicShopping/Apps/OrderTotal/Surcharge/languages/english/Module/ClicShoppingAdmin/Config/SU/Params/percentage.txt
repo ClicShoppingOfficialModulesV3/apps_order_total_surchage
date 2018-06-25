@@ -1,0 +1,2 @@
+cfg_surcharge_percentage_title = Surcharge amount in percent (without %)
+cfg_surcharge_percentage_description = The amount must is calcultate on the sub total

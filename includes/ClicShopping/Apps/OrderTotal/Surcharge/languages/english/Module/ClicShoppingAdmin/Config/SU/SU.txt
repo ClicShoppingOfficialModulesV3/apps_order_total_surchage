@@ -1,0 +1,3 @@
+module_su_title = Surcharge
+module_su_short_title = Surcharge
+module_su_public_title = Surcharge
