@@ -15,8 +15,6 @@ http://monsite/myAdmin/index.php?A&OrderTotal\LowOrderFee
 
 Activate the module in Order Total
 
-link to marketplace : 
-
 ![surchage](https://github.com/ClicShoppingOfficialModulesV3/apps_order_total_surchage/blob/master/ModuleInfosJson/surchage.png)
 
 
