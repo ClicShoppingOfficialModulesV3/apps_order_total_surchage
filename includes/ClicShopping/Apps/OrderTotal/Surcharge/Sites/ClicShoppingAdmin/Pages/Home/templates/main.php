@@ -4,6 +4,7 @@
   use ClicShopping\OM\Registry;
 
   $CLICSHOPPING_Surcharge = Registry::get('Surcharge');
+  $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
 
   if ($CLICSHOPPING_MessageStack->exists('Surcharge')) {
     echo $CLICSHOPPING_MessageStack->get('Surcharge');
