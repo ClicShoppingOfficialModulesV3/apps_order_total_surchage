@@ -7,7 +7,7 @@ text_configure =  Configure App Surcharge
 text_intro = This app allow you to include a surchage in percentage on the order and based on sub total
 module_su_introduction = This app allow you to include a surchage in percentage on the order and based on sub total
 
-button_back = Back
+button_sort_order = Sort order
 button_install_title = Install
 button_configure = Configure
 button_save = Save
