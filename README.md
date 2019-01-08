@@ -15,7 +15,7 @@ http://monsite/myAdmin/index.php?A&OrderTotal\LowOrderFee
 
 Activate the module in Order Total
 
-All informations about the CliCshopping
+All informations about the ClicShopping
 
  Community : https://www.clicshopping.org
 
