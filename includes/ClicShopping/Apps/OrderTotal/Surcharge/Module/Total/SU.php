@@ -1,13 +1,13 @@
 <?php
-/**
- *
- *  @copyright 2008 - https://www.clicshopping.org
- *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
- *  @Licence GPL 2 & MIT
- *  @licence MIT - Portion of osCommerce 2.4
- *  @Info : https://www.clicshopping.org/forum/trademark/
- *
- */
+  /**
+   *
+   * @copyright 2008 - https://www.clicshopping.org
+   * @Brand : ClicShopping(Tm) at Inpi all right Reserved
+   * @Licence GPL 2 & MIT
+   * @licence MIT - Portion of osCommerce 2.4
+   * @Info : https://www.clicshopping.org/forum/trademark/
+   *
+   */
 
   namespace ClicShopping\Apps\OrderTotal\Surcharge\Module\Total;
 
@@ -16,7 +16,8 @@
   use ClicShopping\Apps\OrderTotal\Surcharge\Surcharge as SurchargeApp;
 
 
-  class SU implements \ClicShopping\OM\Modules\OrderTotalInterface  {
+  class SU implements \ClicShopping\OM\Modules\OrderTotalInterface
+  {
 
     public $code;
     public $title;
@@ -28,7 +29,8 @@
     public $surcharge;
     public $maximum;
 
-    public function __construct() {
+    public function __construct()
+    {
 
       if (!Registry::exists('Surcharge')) {
         Registry::set('Surcharge', new SurchargeApp());
@@ -55,38 +57,43 @@
       $this->output = [];
     }
 
-    public function process() {
+    public function process()
+    {
       $CLICSHOPPING_Order = Registry::get('Order');
       $CLICSHOPPING_Currencies = Registry::get('Currencies');
 
       $order_total = $CLICSHOPPING_Order->info['subtotal'];
 
       if ($order_total < $this->maximum && $this->surcharge > 0) {
-         $percentage = (($this->surcharge * 1/100) * 100) . '%';
-         $od_amount = ($this->surcharge * 1/100) * $order_total;
+        $percentage = (($this->surcharge * 1 / 100) * 100) . '%';
+        $od_amount = ($this->surcharge * 1 / 100) * $order_total;
 
-         $CLICSHOPPING_Order->info['total'] = $CLICSHOPPING_Order->info['subtotal'] + $od_amount;
+        $CLICSHOPPING_Order->info['total'] = $CLICSHOPPING_Order->info['subtotal'] + $od_amount;
 
-         $this->output[] = ['title' => $this->title . '  - ' . $percentage . ' :',
-                            'text' => $CLICSHOPPING_Currencies->format($od_amount),
-                            'value' => $od_amount
-                           ];
+        $this->output[] = ['title' => $this->title . '  - ' . $percentage . ' :',
+          'text' => $CLICSHOPPING_Currencies->format($od_amount),
+          'value' => $od_amount
+        ];
       }
     }
 
-    public function check() {
+    public function check()
+    {
       return defined('CLICSHOPPING_APP_SURCHARGE_SU_STATUS') && (trim(CLICSHOPPING_APP_SURCHARGE_SU_STATUS) != '');
     }
 
-    public function install() {
+    public function install()
+    {
       $this->app->redirect('Configure&Install&module=SU');
     }
 
-    public function remove() {
+    public function remove()
+    {
       $this->app->redirect('Configure&Uninstall&module=SU');
     }
 
-    public function keys() {
+    public function keys()
+    {
       return array('CLICSHOPPING_APP_SURCHARGE_SU_SORT_ORDER');
     }
   }
