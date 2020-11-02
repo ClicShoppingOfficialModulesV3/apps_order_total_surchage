@@ -31,7 +31,7 @@
 
       Cache::clear('menu-administrator');
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Surcharge->getDef('alert_module_uninstall_success'), 'success', 'Surcharge');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Surcharge->getDef('alert_module_uninstall_success'), 'success');
 
       $CLICSHOPPING_Surcharge->redirect('Configure&module=' . $current_module);
     }

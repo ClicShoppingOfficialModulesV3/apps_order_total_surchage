@@ -15,19 +15,21 @@
 
   use ClicShopping\Apps\OrderTotal\Surcharge\Surcharge as SurchargeApp;
 
-
   class SU implements \ClicShopping\OM\Modules\OrderTotalInterface
   {
-
     public $code;
     public $title;
     public $description;
     public $enabled;
+    public $group;
     public $output;
     public $sort_order = 0;
     public $app;
     public $surcharge;
     public $maximum;
+    public $signature;
+    public $public_title;
+    protected $api_version;
 
     public function __construct()
     {

@@ -22,8 +22,8 @@
 
   $CLICSHOPPING_Surcharge_Config = Registry::get('SurchargeAdminConfig' . $current_module);
 
-  if ($CLICSHOPPING_MessageStack->exists('Surcharge')) {
-    echo $CLICSHOPPING_MessageStack->get('Surcharge');
+  if ($CLICSHOPPING_MessageStack->exists('main')) {
+    echo $CLICSHOPPING_MessageStack->get('main');
   }
 ?>
 <div class="contentBody">
