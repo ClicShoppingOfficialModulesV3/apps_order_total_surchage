@@ -72,7 +72,7 @@
             echo HTML::button($CLICSHOPPING_Surcharge->getDef('button_save'), null, null, 'success');
 
             if ($CLICSHOPPING_Surcharge->getConfigModuleInfo($current_module, 'is_uninstallable') === true) {
-              echo '<span class="float-md-right">' . HTML::button($CLICSHOPPING_Surcharge->getDef('button_dialog_uninstall'), null, '#', 'warning', ['params' => 'data-toggle="modal" data-target="#ppUninstallModal"']) . '</span>';
+              echo '<span class="float-end">' . HTML::button($CLICSHOPPING_Surcharge->getDef('button_dialog_uninstall'), null, '#', 'warning', ['params' => 'data-toggle="modal" data-target="#ppUninstallModal"']) . '</span>';
             }
           ?>
 
