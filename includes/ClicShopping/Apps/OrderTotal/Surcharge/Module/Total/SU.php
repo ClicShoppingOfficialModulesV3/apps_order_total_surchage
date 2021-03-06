@@ -48,10 +48,10 @@
       $this->title = $this->app->getDef('module_su_title');
       $this->public_title = $this->app->getDef('module_su_public_title');
 
-      $this->enabled = defined('CLICSHOPPING_APP_SURCHARGE_SU_STATUS') && (CLICSHOPPING_APP_SURCHARGE_SU_STATUS == 'True') ? true : false;
-      $this->sort_order = defined('CLICSHOPPING_APP_SURCHARGE_SU_SORT_ORDER') && ((int)CLICSHOPPING_APP_SURCHARGE_SU_SORT_ORDER > 0) ? (int)CLICSHOPPING_APP_SURCHARGE_SU_SORT_ORDER : 0;
+      $this->enabled = \defined('CLICSHOPPING_APP_SURCHARGE_SU_STATUS') && (CLICSHOPPING_APP_SURCHARGE_SU_STATUS == 'True') ? true : false;
+      $this->sort_order = \defined('CLICSHOPPING_APP_SURCHARGE_SU_SORT_ORDER') && ((int)CLICSHOPPING_APP_SURCHARGE_SU_SORT_ORDER > 0) ? (int)CLICSHOPPING_APP_SURCHARGE_SU_SORT_ORDER : 0;
 
-      if (defined('CLICSHOPPING_APP_SURCHARGE_SU_STATUS')) {
+      if (\defined('CLICSHOPPING_APP_SURCHARGE_SU_STATUS')) {
         $this->surcharge = CLICSHOPPING_APP_SURCHARGE_SU_PERCENTAGE;
         $this->maximum = CLICSHOPPING_APP_SURCHARGE_SU_MAXIMUM;
       }
@@ -81,7 +81,7 @@
 
     public function check()
     {
-      return defined('CLICSHOPPING_APP_SURCHARGE_SU_STATUS') && (trim(CLICSHOPPING_APP_SURCHARGE_SU_STATUS) != '');
+      return \defined('CLICSHOPPING_APP_SURCHARGE_SU_STATUS') && (trim(CLICSHOPPING_APP_SURCHARGE_SU_STATUS) != '');
     }
 
     public function install()
