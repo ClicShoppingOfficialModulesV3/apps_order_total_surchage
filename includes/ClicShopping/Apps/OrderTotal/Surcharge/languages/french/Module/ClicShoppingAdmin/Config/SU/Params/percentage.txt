@@ -1,0 +1,2 @@
+cfg_surcharge_percentage_title = Montant de la surchage en pourcentage (sans le %)
+cfg_surcharge_percentage_description = le montant sera calculer en fonction du sous total

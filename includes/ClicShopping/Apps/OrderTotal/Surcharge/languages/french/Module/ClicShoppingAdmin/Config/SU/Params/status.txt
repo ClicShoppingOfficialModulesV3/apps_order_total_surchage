@@ -1,0 +1,6 @@
+cfg_surcharge_status_title = Statut
+cfg_surcharge_status_description = Sélectionner True pour afficher le module dans la boutique
+
+cfg_surcharge_status_true = True
+cfg_surcharge_status_false = False
+

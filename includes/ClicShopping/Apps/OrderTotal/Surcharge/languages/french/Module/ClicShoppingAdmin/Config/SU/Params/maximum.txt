@@ -1,0 +1,2 @@
+cfg_surcharge_maximum_title = Commande maximale pour appliquée la surcharge
+cfg_surcharge_maximum_description = Au dela d'un montant la surcharge ne sera pas appliquée
